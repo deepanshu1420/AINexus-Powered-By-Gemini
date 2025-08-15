@@ -16,6 +16,11 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 
 ---
 
+## 🌟 Live Demo
+[Chat with AINexus Here](http://ainexus-online.netlify.app)
+
+---
+
 ## ⚡ Features
 - **Real-time AI chat:** Seamless communication with the Gemini model.  
 - **Responsive UI:** Clean interface using Tailwind CSS.  
@@ -23,7 +28,7 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 - **React:** Core library for building the UI and managing components.  
 - **Axios:** Handles API requests to the Google Gemini API.  
 - **ReactMarkdown:** Renders AI responses with proper formatting.
- 
+
 ---
 
 ## ✅ Advantages
@@ -38,7 +43,7 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 
 ```bash
 # Clone the repository
-git clone <your-repo-link>
+git clone https://github.com/deepanshu1420/AINexus-Powered-By-Gemini.git
 
 # Navigate to the project folder
 cd AINexus-Powered-By-Gemini

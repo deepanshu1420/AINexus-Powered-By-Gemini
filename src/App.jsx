@@ -61,7 +61,7 @@ function App() {
              rel="noopener noreferrer"
              className="block">
             <h1 className="text-4xl font-bold text-blue-500 hover:text-blue-600 transition-colors">
-              Chat AI
+              AI Nexus
             </h1>
           </a>
         </header>

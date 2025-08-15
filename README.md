@@ -43,7 +43,7 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 
 ```bash
 # Clone the repository
-git clone https://github.com/deepanshu1420/AINexus-Powered-By-Gemini.git
+git clone <your-repo-link>
 
 # Navigate to the project folder
 cd AINexus-Powered-By-Gemini

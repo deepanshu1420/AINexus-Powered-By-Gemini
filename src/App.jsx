@@ -132,7 +132,7 @@ function App() {
                   Welcome to Deepanshu's AI Chat 👋
                 </h2>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-sm sm:text-base">
+                <div className="grid grid-cols-2 md:grid-cols-2 gap-4 text-left text-sm sm:text-base">
                   {categories.map((category) => (
                      <div 
                       key={category} 

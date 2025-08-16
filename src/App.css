@@ -1,27 +1,218 @@
 /* Custom Scrollbar Styles */
 .scrollbar-thin::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #93C5FD;
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #60A5FA;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* --- THEME AND UI STYLES --- */
+
+/* 1. CSS Variables for Theming */
+:root {
+  --bg-gradient-1: #ff9a9e;
+  --bg-gradient-2: #fad0c4;
+  --bg-gradient-3: #fad0c4;
+  --bg-gradient-4: #ffd1ff;
+  --blob-1-color: #ff9a9e;
+  --blob-2-color: #93c5fd;
+  --header-text: #2563EB;
+  --header-text-hover: #1D4ED8;
+  --chat-bg: rgba(255, 255, 255, 0.6);
+  --welcome-bg: rgba(235, 245, 255, 0.7);
+  --welcome-header: #1E40AF;
+  --welcome-text: #4B5563;
+  --welcome-item-bg: rgba(255, 255, 255, 0.8);
+  --user-message-bg: rgba(59, 130, 246, 0.75);
+  --user-message-text: #FFFFFF;
+  --bot-message-bg: rgba(229, 231, 235, 0.75);
+  --bot-message-text: #1F2937;
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --form-bg: rgba(255, 255, 255, 0.6);
+  --input-border: #D1D5DB;
+  --input-focus-ring: #60A5FA;
+  --button-bg: #3B82F6;
+  --button-bg-hover: #2563EB;
+  --button-text: #FFFFFF;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --bg-gradient-1: #0f172a;
+  --bg-gradient-2: #1e3a8a;
+  --bg-gradient-3: #334155;
+  --bg-gradient-4: #475569;
+  --blob-1-color: #7c3aed;
+  --blob-2-color: #db2777;
+  --header-text: #60A5FA;
+  --header-text-hover: #93C5FD;
+  --chat-bg: rgba(31, 41, 55, 0.6);
+  --welcome-bg: rgba(17, 24, 39, 0.7);
+  --welcome-header: #93C5FD;
+  --welcome-text: #D1D5DB;
+  --welcome-item-bg: rgba(55, 65, 81, 0.8);
+  --user-message-bg: rgba(37, 99, 235, 0.7);
+  --user-message-text: #FFFFFF;
+  --bot-message-bg: rgba(55, 65, 81, 0.7);
+  --bot-message-text: #F3F4F6;
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --form-bg: rgba(31, 41, 55, 0.6);
+  --input-border: #4B5563;
+  --input-focus-ring: #3B82F6;
+  --button-bg: #2563EB;
+  --button-bg-hover: #1D4ED8;
+  --button-text: #FFFFFF;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 2. Animated Background & Blobs */
+.animated-background {
+  background: linear-gradient(-45deg, var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3), var(--bg-gradient-4));
+  background-size: 400% 400%;
+  animation: moveGradient 20s ease infinite;
+  transition: background 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+.blob1 {
+  width: 400px;
+  height: 400px;
+  background: var(--blob-1-color);
+  top: -150px;
+  left: -150px;
+  animation: moveBlob1 25s infinite alternate;
+}
+
+.blob2 {
+  width: 300px;
+  height: 300px;
+  background: var(--blob-2-color);
+  bottom: -100px;
+  right: -100px;
+  animation: moveBlob2 30s infinite alternate;
+}
+
+@keyframes moveBlob1 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(200px, 100px) scale(1.2); }
+}
+
+@keyframes moveBlob2 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-150px, -100px) scale(0.8); }
+}
+
+
+/* 3. Header Button Styling */
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: var(--welcome-item-bg);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  backdrop-filter: blur(10px);
+}
+
+.header-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.header-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+/* 4. Typing Indicator Animation */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.typing-indicator .dot {
+  height: 8px;
+  width: 8px;
+  background-color: #9CA3AF;
+  border-radius: 50%;
+  margin: 0 2px;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator .dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-indicator .dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
   }
-  
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: transparent;
+  40% {
+    transform: scale(1);
   }
-  
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    background-color: #93C5FD;
-    border-radius: 3px;
+}
+
+/* 5. Category Box Hover Effect */
+.category-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 120px; /* Use min-height to ensure size but allow growth */
+}
+
+.category-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 30px var(--shadow-color);
+}
+
+
+/* 6. Mobile Responsiveness */
+@media (max-width: 640px) {
+  .blob1 {
+    width: 250px;
+    height: 250px;
   }
-  
-  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background-color: #60A5FA;
+  .blob2 {
+    width: 200px;
+    height: 200px;
   }
-  
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .hide-scrollbar {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-  }
-  
+}

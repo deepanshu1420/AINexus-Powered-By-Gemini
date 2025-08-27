@@ -23,7 +23,7 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 
 ---
 
-## ⚡ Features
+## ⚡ Features & Tech Stack
 - **Real-time AI chat:** Seamless communication with the Gemini model.  
 - **Responsive UI:** Clean interface using Tailwind CSS.  
 - **JavaScript (ES6+):** Modern syntax features for cleaner, more efficient, and scalable code.  

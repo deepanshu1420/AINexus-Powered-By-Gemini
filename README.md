@@ -31,11 +31,38 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 
 ---
 
+## ✨ Highlights
+- 🎨 **Glassmorphism UI** – Modern glass-style design with layered transparency and smooth gradients for a futuristic look.  
+- ⚡ **Fluid Animations** – Lightweight motion effects make interactions seamless and engaging across the app.  
+- 🤖 **AI Integration** – Powered by advanced machine learning models for natural language understanding, smart responses, and intelligent code generation.  
+
+---
+
 ## ✅ Advantages
 - Fast, real-time AI responses.  
 - Responsive and clean UI.  
 - Scalable, modular, and maintainable React codebase.  
 - Supports rich text and Markdown formatting for AI answers.
+
+---
+
+## 📸 Screenshots
+
+### Home (Dark Mode)
+![Home Dark Mode](./screenshots/HomeDarkMode.png)  
+AI Nexus home interface powered by Gemini, running a multi-modal AI pipeline for smooth human-AI interaction.
+
+### AI Response
+![AI Response](./screenshots/Response.png)  
+Displays context-aware responses where Nexus uses Gemini’s deep language understanding to generate accurate answers.
+
+### Code Response
+![Code Response](./screenshots/CodeResponse.png)  
+A coding environment where Nexus taps into Gemini’s reasoning to produce structured and executable code snippets.
+
+### Home (Light Mode)
+![Home Light Mode](./screenshots/HomeLightMode.png)  
+Light theme version of AI Nexus showing clean design with Gemini-driven semantic response alignment.
 
 ---
 

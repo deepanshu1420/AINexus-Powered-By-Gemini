@@ -6,7 +6,7 @@
 [![Axios](https://img.shields.io/badge/Axios-v1.4-orange)](https://axios-http.com/) 
 [![ReactMarkdown](https://img.shields.io/badge/ReactMarkdown-v8.0-lightgrey)](https://github.com/remarkjs/react-markdown) 
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow)](https://developer.mozilla.org/docs/Web/JavaScript) 
-[![Socket.io](https://img.shields.io/badge/Socket.io-v4.7-black)](https://socket.io/) 
+[![Socket.io](https://img.shields.io/badge/Socket.io-v4.7-indigo)](https://socket.io/) 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 **AINexus is a real-time AI chatbot powered by Google Gemini API, built with React, Vite, and Tailwind CSS.**

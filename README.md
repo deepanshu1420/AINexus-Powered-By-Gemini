@@ -34,7 +34,7 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 ## ✨ Highlights
 - 🎨 **Glassmorphism UI** – Modern glass-style design with layered transparency and smooth gradients for a futuristic look.  
 - ⚡ **Fluid Animations** – Lightweight motion effects make interactions seamless and engaging across the app.  
-- 🤖 **AI Integration** – Powered by advanced machine learning models for natural language understanding, smart responses, and intelligent code generation.  
+- 💡 **AI Integration** – Powered by advanced machine learning models for natural language understanding, smart responses, and intelligent code generation.  
 
 ---
 

@@ -9,7 +9,7 @@
 [![Socket.io](https://img.shields.io/badge/Socket.io-v4.7-indigo)](https://socket.io/) 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-**AINexus is a real-time AI chatbot powered by Google Gemini API, built with React, Vite, and Tailwind CSS.**
+**AI Nexus is a real-time AI chatbot powered by the Google Gemini API, built using React, Vite, Tailwind CSS, JavaScript (ES6+), and Socket.io.**
 
 ---
 

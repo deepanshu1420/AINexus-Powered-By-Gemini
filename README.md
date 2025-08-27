@@ -1,4 +1,4 @@
-# 🚀 AINexus-Powered-By-Gemini
+# 🤖 AINexus-Powered-By-Gemini
 
 [![Vite](https://img.shields.io/badge/Vite-v4.3-purple)](https://vitejs.dev/) 
 [![React](https://img.shields.io/badge/React-v18-blue)](https://reactjs.org/) 

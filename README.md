@@ -64,7 +64,7 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 ![Code Response](./screenshots/CodeResponse.png)  
 *A coding environment where Nexus taps into Gemini’s reasoning to produce structured and executable code snippets.*
 
-### Mobile View (Responsive Design)
+### Mobile View 
 ![Mobile View](./screenshots/MobileView.png)  
 *Responsive design ensures seamless AI interactions on mobile devices with adaptive layouts.*
 

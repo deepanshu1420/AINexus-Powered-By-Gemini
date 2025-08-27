@@ -50,19 +50,19 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 
 ### Home (Dark Mode)
 ![Home Dark Mode](./screenshots/HomeDarkMode.png)  
-AI Nexus home interface powered by Gemini, running a multi-modal AI pipeline for smooth human-AI interaction.
+*AI Nexus home interface powered by Gemini, running a multi-modal AI pipeline for smooth human-AI interaction.*
 
 ### AI Response
 ![AI Response](./screenshots/Response.png)  
-Displays context-aware responses where Nexus uses Gemini’s deep language understanding to generate accurate answers.
+*Displays context-aware responses where Nexus uses Gemini’s deep language understanding to generate accurate answers.*
 
 ### Code Response
 ![Code Response](./screenshots/CodeResponse.png)  
-A coding environment where Nexus taps into Gemini’s reasoning to produce structured and executable code snippets.
+*A coding environment where Nexus taps into Gemini’s reasoning to produce structured and executable code snippets.*
 
 ### Home (Light Mode)
 ![Home Light Mode](./screenshots/HomeLightMode.png)  
-Light theme version of AI Nexus showing clean design with Gemini-driven semantic response alignment.
+*Light theme version of AI Nexus showing clean design with Gemini-driven semantic response alignment.*
 
 ---
 

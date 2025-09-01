@@ -438,6 +438,7 @@
     justify-content: center;   /* Center buttons on smaller screens */
     width: 100%;               /* Ensure container fits screen */
     box-sizing: border-box;    /* Include padding in width */
+    border-radius: 0.90rem; /* smaller radius for mobile */
   }
 
   .header-buttons button {
@@ -512,6 +513,9 @@
   font-style: italic;
   margin-top: 2px;      /* little gap from main text */
 }
+
+
+
 
 
 

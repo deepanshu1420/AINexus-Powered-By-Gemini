@@ -79,7 +79,7 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 
 ### Mobile View 
 ![Mobile View](./screenshots/MobileView.png)  
-*Responsive design ensures seamless AI interactions on mobile devices with adaptive layouts.*
+*Responsive design ensures effortless AI usage on mobile devices with adaptive layouts.*
 
 ### Home (Light Mode)
 ![Home Light Mode](./screenshots/HomeLightMode.png)  

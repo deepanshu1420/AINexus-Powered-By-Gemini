@@ -429,6 +429,20 @@
 }
 
 
+/* 7. Header Button adjustments for Mobile */
+@media (max-width: 640px) {
+  .header-buttons {
+    gap: 0.5rem; /* Reduces space between buttons */
+    padding: 0.3rem; /* Reduces padding on the button container */
+  }
+
+  .header-buttons button {
+    padding: 0.4rem 0.8rem; /* Makes the buttons smaller */
+    font-size: 0.875rem;  /* Makes the text inside the buttons smaller */
+    border-radius: 1rem; /* Slightly reduces the corner rounding */
+  }
+}
+
 
 
 

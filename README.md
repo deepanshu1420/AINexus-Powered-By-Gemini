@@ -15,7 +15,7 @@
 ---
 
 ## 🌟 Overview
-AINexus provides a responsive, interactive chat experience. Users can ask questions and get AI-generated answers in real-time, powered by Google Gemini API. It’s designed for smooth conversations and a clean user interface.
+AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gemini API. Features include real-time chat history, query editing and response copying, adaptive mobile layouts, and theme toggling, enabling streamlined human-AI engagement with a polished, minimalistic UI.
 
 ---
 
@@ -39,13 +39,16 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 ## ✨ Highlights
 - 🎨 **Glassmorphism UI** – Modern glass-style design with layered transparency and smooth gradients for a futuristic look.  
 - ⚡ **Fluid Animations** – Lightweight motion effects make interactions seamless and engaging across the app.  
-- 💡 **AI Integration** – Powered by advanced machine learning models for natural language understanding, smart responses, and intelligent code generation.  
+- 💡 **AI Integration** – Powered by advanced machine learning models for natural language understanding, smart responses, and intelligent code generation. 
+- 📝 **Chat History** - Track previous conversations easily for context-aware interactions.
+- ✏️ **Edit & Copy** - Modify your queries and copy AI responses effortlessly for smooth workflow.
+- ⏱️ **Response Typing Speed Settings** - Customize AI response speed to match your preferred reading and interaction pace. 
 
 ---
 
 ## ✅ Advantages
 - Fast, real-time AI responses.  
-- Responsive and clean UI.  
+- Responsive and clean Modern styled UI.  
 - Scalable, modular, and maintainable React codebase.  
 - Supports rich text and Markdown formatting for AI answers.
 

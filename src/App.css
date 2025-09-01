@@ -468,6 +468,54 @@
 }
 
 
+/* --- ADD THIS AT THE END OF YOUR CSS --- */
+
+/* 9. Markdown & Code Block Styling */
+.markdown-content pre {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--bot-message-text);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;   /* Adds horizontal scroll for long lines */
+  white-space: pre-wrap;  /* Preserves whitespace and wraps lines */
+  word-wrap: break-word;
+  border: 1px solid var(--glass-border);
+  margin: 0.5rem 0;
+}
+
+.markdown-content code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  direction: ltr;       /* Ensures code is displayed left-to-right */
+  text-align: left;     /* Ensures code text is aligned left */
+}
+
+/* Style for inline code (like `this`) */
+.markdown-content p > code {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+
+/* Code inside a pre block should not have extra styling */
+.markdown-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+
+/* Edited → Resent label below the text */
+.edited-label {
+  display: block;       /* forces new line */
+  font-size: 0.75em;
+  color: #999;
+  font-style: italic;
+  margin-top: 2px;      /* little gap from main text */
+}
+
+
+
+
 
 
 

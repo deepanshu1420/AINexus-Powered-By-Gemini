@@ -228,22 +228,31 @@ function App() {
             {!isSidebarOpen && (
               <button className="sidebar-rail-btn" onClick={toggleSidebar} aria-label="Open sidebar"><span className="rail-icon">≡</span></button>
             )}
-            <a 
-            href="https://github.com/deepanshu1420/AINexus-Powered-By-Gemini" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="block"
-             >
+           <a
+           href="https://github.com/deepanshu1420/AINexus-Powered-By-Gemini"
+           target="_blank"
+           rel="noopener noreferrer" 
+          className="block"
+           >
             <h1 className="text-3xl sm:text-4xl font-bold text-[var(--header-text)] hover:text-[var(--header-text-hover)] transition-colors flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="2" />
-            <path d="M12 2a10 10 0 1 0 10 10" />
-            <path d="M12 12a10 10 0 0 1-5-8.66" />
-            <path d="M12 12a10 10 0 0 0 5-8.66" />
-         </svg>
-              AI Nexus
-         </h1>
-         </a>
+           <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+           >
+             <circle cx="12" cy="12" r="2" />
+             <path d="M12 2a10 10 0 1 0 10 10" />
+             <path d="M12 12a10 10 0 0 1-5-8.66" />
+             <path d="M12 12a10 10 0 0 0 5-8.66" />
+            </svg>
+            AI Nexus
+            </h1>
+          </a>
           </div>
           <div className="header-buttons flex items-center gap-2 relative">
             <button onClick={toggleSidebar} className="bg-[var(--button-bg)] text-[var(--button-text)] hover:bg-[var(--button-bg-hover)]">History 📜</button>
@@ -309,64 +318,109 @@ function App() {
                     backdropFilter: "blur(20px)",
                     border: "1px solid var(--glass-border)"
                   }}>
-                    {editingIndex === index ? (
-                      <div
-                        contentEditable
-                        suppressContentEditableWarning
-                        ref={(el) => { if (el && el.innerText !== editText) el.innerText = editText; }}
-                        onInput={(e) => setEditText(e.currentTarget.innerText)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" && !e.shiftKey) {
-                            e.preventDefault();
-                            const updated = [...chatHistory];
-                            const newText = e.currentTarget.innerText.trim();
-                            updated[index].content = newText;
-                            setChatHistory(updated);
-                            setEditingIndex(null);
-                            setQuestion(newText);
-                            generateAnswer(newText);
-                          }
-                        }}
-                        className="w-full p-2 rounded-2xl"
-                        style={{
-                          backgroundColor: chat.type === "question" ? "var(--user-message-bg)" : "var(--bot-message-bg)",
-                          color: chat.type === "question" ? "var(--user-message-text)" : "var(--bot-message-text)",
-                          whiteSpace: "pre-wrap",
-                          wordBreak: "break-word",
-                          outline: "none",
-                          minHeight: "1rem",
-                        }}
-                      />
-                    ) : (
-                      <ReactMarkdown>{chat.content}</ReactMarkdown>
-                    )}
-                    {/* Hover buttons */}
-                    <div className="absolute top-1 right-1 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs">
-                      {editingIndex === index ? (
-                        <>
-                          <FiCheck className="cursor-pointer hover:text-green-500" onClick={() => {
-                            const updated = [...chatHistory];
-                            const newText = editText.trim();
-                            updated[index].content = newText;
-                            setChatHistory(updated);
-                            setEditingIndex(null);
-                            setQuestion(newText);
-                            generateAnswer(newText);
-                          }} />
-                          <FiX className="cursor-pointer hover:text-red-500" onClick={() => setEditingIndex(null)} />
-                        </>
-                      ) : (
-                        <>
-                          <FiCopy className="cursor-pointer hover:text-blue-500" onClick={() => navigator.clipboard.writeText(chat.content)} />
-                          {chat.type === "question" && (
-                            <FiEdit className="cursor-pointer hover:text-yellow-500" onClick={() => {
-                              setEditingIndex(index);
-                              setEditText(chat.content);
-                            }} />
-                          )}
-                        </>
-                      )}
-                    </div>
+                 {editingIndex === index ? (
+                 <div
+                 contentEditable
+                 suppressContentEditableWarning
+                 ref={(el) => {
+                 if (el && el.innerText !== editText) el.innerText = editText;
+                 }}
+                onInput={(e) => setEditText(e.currentTarget.innerText)}
+                onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+               e.preventDefault();
+               const newText = e.currentTarget.innerText.trim();
+
+                  const updated = [...chatHistory];
+                // ✅ keep old question, just mark it as edited
+              updated[index] = {
+               ...updated[index],
+                edited: true,
+              };
+
+                setChatHistory(updated);
+                setEditingIndex(null);
+                setQuestion(""); // clear input box
+                generateAnswer(newText); // send new prompt
+                }
+               }}
+              className="w-full p-2 rounded-2xl"
+             style={{
+             backgroundColor:
+         chat.type === "question"
+          ? "var(--user-message-bg)"
+          : "var(--bot-message-bg)",
+           color:
+             chat.type === "question"
+             ? "var(--user-message-text)"
+              : "var(--bot-message-text)",
+              whiteSpace: "pre-wrap",
+              wordBreak: "break-word",
+               outline: "none",
+              minHeight: "1rem",
+               }}
+                  />
+               ) : (
+                 <>
+               {chat.type === "answer" ? (
+               <div className="markdown-content">
+                <ReactMarkdown>{chat.content}</ReactMarkdown>
+                </div>
+                ) : (
+                <div>
+                {chat.content}
+               {chat.edited && (
+                <span className="edited-label">(edited → resent)</span>
+                )}
+               </div>
+                )}
+                </>
+                )}
+
+                {/* Hover buttons */}
+                <div className="absolute top-1 right-1 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs">
+                {editingIndex === index ? (
+               <>
+              <FiCheck
+               className="cursor-pointer hover:text-green-500"
+               onClick={() => {
+           const newText = editText.trim();
+           const updated = [...chatHistory];
+           // ✅ mark old as edited
+             updated[index] = {
+              ...updated[index],
+             edited: true,
+             };
+                 setChatHistory(updated);
+                 setEditingIndex(null);
+                 setQuestion(""); // clear input
+                 generateAnswer(newText); // send new prompt
+                }}
+                 />
+              <FiX
+             className="cursor-pointer hover:text-red-500"
+             onClick={() => setEditingIndex(null)}
+              />
+             </>
+           ) : (
+             <>
+            <FiCopy
+            className="cursor-pointer hover:text-blue-500"
+             onClick={() => navigator.clipboard.writeText(chat.content)}
+                />
+               {chat.type === "question" && (
+            <FiEdit
+           className="cursor-pointer hover:text-yellow-500"
+            onClick={() => {
+            setEditingIndex(index);
+            setEditText(chat.content);
+                }}
+                />
+                 )}
+            </>
+               )}
+                  </div>
+
                   </div>
                 </div>
               ))}

@@ -521,23 +521,27 @@
     width: 85vw;
     display: flex;
     flex-direction: column;
-    height: 100vh;       /* full screen height */
+    height: 100vh;
     max-height: 100vh;
+    overflow: hidden; /* prevent double scroll */
   }
 
   .sidebar-list {
-    flex: 1;             /* take remaining space */
-    min-height: 0;       /* allow scroll */
-    overflow-y: auto;    /* scrollable list */
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
   }
 
   .sidebar-footer {
-    flex-shrink: 0;      /* keep footer visible */
-    padding: 10px;
+    position: sticky;   /* <--- this keeps it visible */
+    bottom: 0;
     background: var(--form-bg);
     border-top: 1px solid var(--glass-border);
+    padding: 10px;
+    z-index: 10;        /* make sure it sits above list */
   }
 }
+
 
 
 

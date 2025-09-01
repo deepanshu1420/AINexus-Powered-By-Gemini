@@ -204,7 +204,7 @@ function App() {
           <h3>Session history</h3>
           <button className="sidebar-close" onClick={() => setIsSidebarOpen(false)} aria-label="Close history">✕</button>
         </div>
-        <div className="sidebar-list hide-scrollbar">
+        <div className="sidebar-list hide-scrollbar min-h-0">
           {chatHistory.length === 0 ? (
             <p className="sidebar-empty">No chats yet.</p>
           ) : (

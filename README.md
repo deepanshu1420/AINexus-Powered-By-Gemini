@@ -65,6 +65,18 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 ![Code Response](./screenshots/CodeResponse.png)  
 *A coding environment where Nexus taps into Gemini’s reasoning to produce structured and executable code snippets.*
 
+### Chat History
+![Chat History](./screenshots/ChatHistory.png)  
+*Shows previous AI interactions with timestamps, making it easy to track conversation context.*
+
+### Edit and Copy Feature
+![Edit and Copy Feature](./screenshots/EditandCopyFeature.png)  
+*Allows users to edit their questions and copy AI responses directly for smoother interaction and workflow.*
+
+### Settings & Typing Speed
+![Settings Typing Speed](./screenshots/SettingsTypingSpeed.png)  
+*Allows customization of AI response speed and personalization of interaction settings.*
+
 ### Mobile View 
 ![Mobile View](./screenshots/MobileView.png)  
 *Responsive design ensures seamless AI interactions on mobile devices with adaptive layouts.*

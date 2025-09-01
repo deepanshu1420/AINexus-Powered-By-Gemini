@@ -514,6 +514,31 @@
   margin-top: 2px;      /* little gap from main text */
 }
 
+/*---------Sidebar fixes for mobile---------------------*/
+
+@media (max-width: 640px) {
+  .sidebar {
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;       /* full screen height */
+    max-height: 100vh;
+  }
+
+  .sidebar-list {
+    flex: 1;             /* take remaining space */
+    min-height: 0;       /* allow scroll */
+    overflow-y: auto;    /* scrollable list */
+  }
+
+  .sidebar-footer {
+    flex-shrink: 0;      /* keep footer visible */
+    padding: 10px;
+    background: var(--form-bg);
+    border-top: 1px solid var(--glass-border);
+  }
+}
+
 
 
 

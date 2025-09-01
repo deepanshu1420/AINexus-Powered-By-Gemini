@@ -71,7 +71,7 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 
 ### Edit and Copy Feature
 ![Edit and Copy Feature](./screenshots/EditandCopyFeature.png)  
-*Allows users to edit their questions and copy AI responses directly for smoother interaction and workflow.*
+*Allows users to edit their questions and copy AI responses directly for streamlined collaboration and workflow.*
 
 ### Settings & Typing Speed
 ![Settings Typing Speed](./screenshots/SettingsTypingSpeed.png)  

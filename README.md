@@ -67,7 +67,7 @@ AINexus provides a responsive, interactive chat experience. Users can ask questi
 
 ### Chat History
 ![Chat History](./screenshots/ChatHistory.png)  
-*Shows previous AI interactions with timestamps, making it easy to track conversation context.*
+*Shows previous AI interactions, making it easy to track conversation context.*
 
 ### Edit and Copy Feature
 ![Edit and Copy Feature](./screenshots/EditandCopyFeature.png)  

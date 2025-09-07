@@ -318,8 +318,8 @@
 }
 
 .history-item:hover {
-  background: rgba(255, 255, 255, 0.2); /* frosted glass */
-  transform: translateX(6px);
+  background: rgba(255, 255, 255, 0.23); /* frosted glass */
+  transform: translateX(7px);
 }
 
 .history-badge {
@@ -513,6 +513,67 @@
   font-style: italic;
   margin-top: 2px;      /* little gap from main text */
 }
+
+
+/* === ADD THIS ENTIRE BLOCK TO THE END OF YOUR CSS FILE === */
+
+/* 1. Styles for the new header button container */
+.sidebar-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Creates space between the 'Clear' and '✕' buttons */
+}
+
+
+/* 2. DEFAULT (DESKTOP) BEHAVIOR */
+/* By default, the new mobile button is hidden on screens wider than 640px */
+.sidebar-clear-mobile {
+  display: none;
+}
+
+
+/* 3. MOBILE-ONLY BEHAVIOR */
+@media (max-width: 640px) {
+
+  /* Hide the original footer button on mobile */
+  .sidebar-clear {
+    display: none;
+  }
+  
+  /* Show the new mobile button in the header */
+  .sidebar-clear-mobile {
+    display: inline-block; /* Makes the button visible */
+    
+    /* Add styling to make it smaller and fit the header */
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 9px;
+
+    /* Re-use your existing button theme */
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    
+    /* UPDATED: Added 'transform' for the press effect animation */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+
+  .sidebar-clear-mobile:hover {
+    background-color: var(--button-bg-hover);
+  }
+
+  /* NEW: Style for when the button is actively being pressed */
+  .sidebar-clear-mobile:active {
+    background-color: var(--button-bg-hover); /* Darkens the button */
+    transform: scale(0.96); /* Slightly shrinks the button */
+  }
+}
+
+
+
 
 
 

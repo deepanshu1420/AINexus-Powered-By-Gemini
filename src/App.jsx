@@ -198,11 +198,17 @@ function App() {
       {/* Sidebar Overlay */}
       <div className={`sidebar-overlay ${isSidebarOpen ? "show" : ""}`} onClick={() => setIsSidebarOpen(false)} aria-hidden={!isSidebarOpen}></div>
 
-      {/* Chat History Sidebar */}
+     {/* Chat History Sidebar */}
       <aside className={`sidebar ${isSidebarOpen ? "open" : ""}`} role="dialog" aria-label="Chat History">
         <div className="sidebar-header">
           <h3>Session history</h3>
-          <button className="sidebar-close" onClick={() => setIsSidebarOpen(false)} aria-label="Close history">✕</button>
+          {/* NEW: Container for header action buttons */}
+          <div className="sidebar-header-actions">
+            {/* NEW: Mobile-only button */}
+            <button className="sidebar-clear-mobile" onClick={clearSession}>Clear session</button>
+            {/* Your existing close button */}
+            <button className="sidebar-close" onClick={() => setIsSidebarOpen(false)} aria-label="Close history">✕</button>
+          </div>
         </div>
         <div className="sidebar-list hide-scrollbar min-h-0">
           {chatHistory.length === 0 ? (
@@ -217,6 +223,7 @@ function App() {
           )}
         </div>
         <div className="sidebar-footer">
+          {/* UNTOUCHED: This is your original desktop button. Note the className is "sidebar-clear" */}
           <button className="sidebar-clear" onClick={clearSession}>Clear session</button>
         </div>
       </aside>
@@ -474,7 +481,7 @@ function App() {
             <button
               type="button"
               onClick={generatingAnswer ? handleStopGeneration : handleSubmit}
-              className={`px-4 sm:px-6 py-2 rounded-2xl transition-all duration-200 transform hover:scale-105`}
+              className={`px-4 sm:px-6 py-2 rounded-2xl transition-all duration-200 transform hover:scale-105 active:scale-95`}
               style={{ backgroundColor: "var(--button-bg)", color: "var(--button-text)" }}
             >
               {generatingAnswer ? "Stop" : "Send"}

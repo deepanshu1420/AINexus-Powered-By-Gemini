@@ -6,12 +6,12 @@
 [![Axios](https://img.shields.io/badge/Axios-v1.4-orange)](https://axios-http.com/) 
 [![ReactMarkdown](https://img.shields.io/badge/ReactMarkdown-v8.0-lightgrey)](https://github.com/remarkjs/react-markdown) 
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow)](https://developer.mozilla.org/docs/Web/JavaScript) 
-[![Socket.io](https://img.shields.io/badge/Socket.io-v4.7-indigo)](https://socket.io/) 
+[![Socket.IO](https://img.shields.io/badge/Socket.IO-v4.7-indigo)](https://socket.io/) 
 [![UI/UX](https://img.shields.io/badge/UI%2FUX-2025-pink)](#) 
 [![Gemini API](https://img.shields.io/badge/Gemini%20API-v2.5%20Pro-blueviolet)](https://developers.generativeai.google/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-**AI Nexus is a real-time AI chatbot powered by the Google Gemini-2.5-Pro API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+), and Socket.io.**
+**AI Nexus is a real-time AI chatbot powered by the Google Gemini-2.5-Pro API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+), and Socket.IO.**
 
 ---
 
@@ -29,7 +29,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 - **Real-time AI chat:** Seamless communication with the Gemini model.  
 - **Responsive UI/UX:** Clean, user-friendly interface with Tailwind CSS and modern design principles.  
 - **JavaScript (ES6+):** Modern syntax features for cleaner, more efficient, and scalable code.  
-- **Socket.io:** Enables real-time, bi-directional communication between client and server for live AI chat.  
+- **Socket.IO:** Enables real-time, bi-directional communication between client and server for live AI chat.  
 - **Vite:** Fast build tool and development server with hot-reloading.  
 - **React:** Core library for building the UI and managing components.  
 - **Axios:** Handles API requests to the Google Gemini API.  

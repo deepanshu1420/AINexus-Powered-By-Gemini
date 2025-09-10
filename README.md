@@ -12,16 +12,13 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 **AI Nexus is a real-time AI chatbot powered by the Google Gemini-2.5-Pro API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+), and Socket.IO.**
+<br><br>
+🌐 Live Demo &nbsp; [Chat with AINexus Here](http://ainexus-online.netlify.app)
 
 ---
 
 ## 🌟 Overview
 AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gemini API. Features include real-time chat history, query editing and response copying, adaptive mobile layouts, and theme toggling, enabling streamlined human-AI engagement with a polished, minimalistic UI.
-
----
-
-## 🌟 Live Demo
-[Chat with AINexus Here](http://ainexus-online.netlify.app)
 
 ---
 

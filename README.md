@@ -13,7 +13,7 @@
 
 **AI Nexus is a real-time AI chatbot powered by the Google Gemini-2.5-Pro API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+), and Socket.IO.**
 <br><br>
-🌐 Live Demo &nbsp; [Chat with AINexus Here](http://ainexus-online.netlify.app)
+🌐 Live Demo: &nbsp; [Chat with AINexus Here](http://ainexus-online.netlify.app)
 
 ---
 

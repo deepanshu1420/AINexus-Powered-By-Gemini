@@ -126,7 +126,7 @@ function App() {
 
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${
           import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT
         }`,
         method: "post",
@@ -167,14 +167,20 @@ function App() {
       }
     } catch (error) {
       console.log(error);
+      let message = "Something went wrong. Please try again.";
+      if (error.response?.status === 429) {
+        message = "Too many requests. Please wait 2-3 seconds and try again.";
+      } else if (!error.response) {
+        message = "Network issue. Check your internet connection.";
+      }
       setChatHistory((prev) => [
         ...prev,
-        { type: "answer", content: "Sorry - Something went wrong. Please try again!" },
+        { type: "answer", content: message },
       ]);
       setGeneratingAnswer(false);
     }
   };
-  
+
   const handleSubmit = (e) => {
     e?.preventDefault();
     if (!generatingAnswer && question.trim()) {

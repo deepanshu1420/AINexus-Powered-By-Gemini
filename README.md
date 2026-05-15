@@ -11,27 +11,32 @@
 [![Gemini API](https://img.shields.io/badge/Gemini%20API-v2.5%20Pro-blueviolet)](https://developers.generativeai.google/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-**AI Nexus is a real-time AI chatbot powered by the Google Gemini-2.5-Pro API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+), and Socket.IO.**
+**AI Nexus is a real-time AI chatbot powered by the Google `Gemini 2.5 Pro` API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+) and Socket.IO.**
 
 **🌐 Ready to chat with AI Nexus :** [Live Demo](http://ainexus-online.netlify.app)
 
 ## 🌟 Overview
-AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gemini API. Features include real-time chat history, query editing and response copying, adaptive mobile layouts, and theme toggling, enabling streamlined human-AI engagement with a polished, minimalistic UI.
+AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gemini API. Features include real-time chat history, query editing and response copying, adaptive mobile layouts and theme toggling, enabling streamlined human-AI engagement with a polished, minimalistic UI.
+
+**Important Notes:**
+
+- 🔑 A valid Gemini API key is required for AI responses and real-time interaction.  
+- 📶 Stable high-speed internet is recommended, as slow connections may delay or interrupt data fetching.  
 
 ## ✨ Features / Highlights
 
-- 🎨 **Glassmorphism UI:** Modern glass-style design inspired by `Apple iOS 26` Liquid Glass, featuring layered transparency and smooth gradients for a futuristic look.
-- ⚡ **Fluid Animations:** Lightweight motion effects make interactions seamless and engaging across the app.  
-- 💡 **AI Integration:** Powered by advanced machine learning models for natural language understanding, smart responses, and intelligent code generation. 
-- 📝 **Chat History:** Track previous conversations easily for context-aware interactions.
-- ✏️ **Edit & Copy:** Modify your queries and copy AI responses effortlessly for smooth workflow.
-- ⏱️ **Response Typing Speed Settings:** Customize AI response generation speed to match your preferred reading and interaction pace. 
+- **🎨 Glassmorphism UI:** Modern glass-style design inspired by `Apple iOS 26` Liquid Glass, featuring layered transparency and smooth gradients for a futuristic look.
+- **⚡ Fluid Animations:** Lightweight motion effects make interactions seamless and engaging across the app.  
+- **💡 AI Integration:** Powered by advanced machine learning models for natural language understanding, smart responses and intelligent code generation. 
+- **📝 Chat History:** Track previous conversations easily for context-aware interactions.
+- **✏️ Edit & Copy:** Modify your queries and copy AI responses effortlessly for smooth workflow.
+- **⚙️ Response Typing Speed Settings:** Customize AI response generation speed to match your preferred reading and interaction pace. 
 
-## 💡 Spotlight & Tech Stack
+## 💡 Spotlights & Tech Stack
 
 - **🤖 Real-time AI chat:** Seamless communication with the Gemini model.  
 - **🎨 Responsive UI/UX:** Clean, user-friendly interface with Tailwind CSS and modern design principles.  
-- **☄️ JavaScript (ES6+):** Modern syntax features for cleaner, more efficient, and scalable code.  
+- **☄️ JavaScript (ES6+):** Modern syntax features for cleaner, more efficient and scalable code.  
 - **🔄 Socket.IO:** Enables real-time, bi-directional communication between client and server for live AI chat.  
 - **🚀 Vite:** Fast build tool and development server with hot-reloading.  
 - **⚛️ React:** Core library for building the UI and managing components.  

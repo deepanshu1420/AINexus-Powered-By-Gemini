@@ -20,9 +20,9 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 
 ## ✨ Features / Highlights
 
-- 🎨 **Glassmorphism UI:** Modern glass-style design inspired by Apple iOS 26 Liquid Glass, featuring layered transparency and smooth gradients for a futuristic look.
+- 🎨 **Glassmorphism UI:** Modern glass-style design inspired by `Apple iOS 26` Liquid Glass, featuring layered transparency and smooth gradients for a futuristic look.
 - ⚡ **Fluid Animations:** Lightweight motion effects make interactions seamless and engaging across the app.  
-- 💡 **AI Integration:** Powered by advanced machine learning models for natural language understanding, smart responses, and intelligent code generation. 
+- 💡 **AI Integration:** Powered by advanced machine learning models for `natural language understanding`, smart responses, and intelligent code generation. 
 - 📝 **Chat History:** Track previous conversations easily for context-aware interactions.
 - ✏️ **Edit & Copy:** Modify your queries and copy AI responses effortlessly for smooth workflow.
 - ⏱️ **Response Typing Speed Settings:** Customize AI response generation speed to match your preferred reading and interaction pace. 

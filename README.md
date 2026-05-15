@@ -31,7 +31,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 - **📝 Chat History:** Track previous conversations easily for context-aware interactions.
 - **✏️ Edit & Copy:** Modify your queries and copy AI responses effortlessly for smooth workflow.
 - **⚙️ Response Typing Speed Settings:** Customize AI response generation speed to match your preferred reading and interaction pace. 
-- **⌨️ Typing Animation:** Real-time AI typing effects create a more natural and interactive conversation experience.
+- **⌨️ Typing Animation:** Real-time AI typing effects create a more natural and immersive conversation experience.
 
 ## 💡 Spotlights / Tech Stack Used
 

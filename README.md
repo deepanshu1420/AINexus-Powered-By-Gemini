@@ -13,7 +13,7 @@
 
 AI Nexus is a real-time AI neural interface powered by `Google Gemini 2.5 Pro` API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+) and Socket.IO.
 
-**🌐 Ready to chat with AI Nexus :** [Live Demo](http://ainexus-online.netlify.app)
+**🌐 Ready to chat with AI Nexus :** [Live Demo](https://ainexuspro.vercel.app/)
 
 ## 🌟 Overview
 AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gemini API. Features include real-time chat history, query editing and response copying, adaptive mobile layouts and theme toggling, enabling streamlined human-AI engagement with a polished, minimalistic UI.

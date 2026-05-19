@@ -43,7 +43,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 - **⚛️ React:** Core library for building the UI and managing components.  
 - **🔗 Axios:** Handles API requests to the Google Gemini API.  
 - **📝 ReactMarkdown:** Renders AI responses with proper formatting.
-- **▲ Vercel:** Deployed for fast and seamless performance.
+-  **▲ Vercel:** Deployed for fast and seamless performance.
 
 ## ✅ Advantages
 

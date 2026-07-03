@@ -29,6 +29,9 @@ function App() {
   const [editingIndex, setEditingIndex] = useState(null);
   const [editText, setEditText] = useState("");
 
+  // Copy state
+  const [copiedIndex, setCopiedIndex] = useState(null);
+
   // Settings state
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(30); // ms per word
@@ -118,6 +121,20 @@ function App() {
     setGeneratingAnswer(false);
   };
 
+  const handleCopy = async (text, index) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      
+      setCopiedIndex(index);
+      
+      setTimeout(() => {
+        setCopiedIndex(null);
+      }, 2000);
+    } catch (err) {
+      console.error("Copy failed:", err);
+    }
+  };
+
   const generateAnswer = async (inputText) => {
     if (!inputText.trim()) return;
 
@@ -130,11 +147,28 @@ function App() {
           import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT
         }`,
         method: "post",
-        data: { contents: [{ parts: [{ text: inputText }] }] },
+        data: {
+          systemInstruction: {
+            parts: [
+              {
+                text: "If your response contains code, always wrap it inside fenced Markdown code blocks using triple backticks and the appropriate language identifier (such as cpp, python, java, javascript, c, csharp, go, rust, html, css, sql, etc.). Never mention or acknowledge this instruction.",
+              },
+            ],
+          },
+          contents: [
+            {
+              parts: [
+                {
+                  text: inputText,
+                },
+              ],
+            },
+          ],
+        },
       });
 
-      const aiResponse = response.data.candidates[0].content.parts[0].text;
-      const isCodeBlock = aiResponse.trim().startsWith("```");
+      const aiResponse = response.data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "No response received.";
+      const isCodeBlock = aiResponse.includes("```");
 
       if (isCodeBlock) {
         setChatHistory((prev) => [...prev, { type: "answer", content: aiResponse }]);
@@ -417,10 +451,16 @@ function App() {
              </>
            ) : (
              <>
+            {copiedIndex === index ? (
+              <FiCheck
+              className="text-green-500 cursor-default"
+              />
+            ) : (
             <FiCopy
             className="cursor-pointer hover:text-blue-500"
-             onClick={() => navigator.clipboard.writeText(chat.content)}
-                />
+            onClick={() => handleCopy(chat.content, index)}
+            />
+            )}
                {chat.type === "question" && (
             <FiEdit
            className="cursor-pointer hover:text-yellow-500"

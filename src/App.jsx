@@ -125,9 +125,25 @@ function App() {
     setGeneratingAnswer(false);
   };
 
+  const stripMarkdown = (text) => {
+  return text
+    .replace(/```[\w]*\n?([\s\S]*?)```/g, '$1')   // code blocks → just the code
+    .replace(/#{1,6}\s+/gm, '')                  // headings
+    .replace(/\*\*(.+?)\*\*/g, '$1')             // bold
+    .replace(/\*(.+?)\*/g, '$1')                 // italic
+    .replace(/\*/g, '')                           // remove any leftover lone asterisks
+    .replace(/~~(.+?)~~/g, '$1')                 // strikethrough
+    .replace(/`(.+?)`/g, '$1')                   // inline code
+    .replace(/\[(.+?)\]\(.+?\)/g, '$1')          // links
+    .replace(/^\s*[-*+]\s+/gm, '')              // unordered lists
+    .replace(/^\s*\d+\.\s+/gm, '')              // ordered lists
+    .replace(/^\s*>\s+/gm, '')                   // blockquotes
+    .trim();
+  };
+
   const handleCopy = async (text, index) => {
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(stripMarkdown(text));
       
       setCopiedIndex(index);
       

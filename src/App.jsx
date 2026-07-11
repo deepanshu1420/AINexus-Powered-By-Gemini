@@ -3,6 +3,10 @@ import "./App.css";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import { FiCopy, FiEdit, FiCheck, FiX } from "react-icons/fi";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
 
 // Category Data
 const categories = [
@@ -143,7 +147,7 @@ function App() {
 
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${
           import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT
         }`,
         method: "post",
@@ -411,7 +415,12 @@ function App() {
                  <>
                {chat.type === "answer" ? (
                <div className="markdown-content">
-                <ReactMarkdown>{chat.content}</ReactMarkdown>
+                <ReactMarkdown
+                remarkPlugins={[remarkGfm, remarkMath]}
+                rehypePlugins={[rehypeKatex]}
+                >
+                  {chat.content}
+                </ReactMarkdown>
                 </div>
                 ) : (
                 <div>

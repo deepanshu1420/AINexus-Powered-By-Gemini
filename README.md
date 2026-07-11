@@ -12,7 +12,7 @@
 [![Deployed](https://img.shields.io/badge/Deployed-Vercel-red?logo=vercel&logoColor=white)](https://vercel.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-AI Nexus is a real-time AI neural interface powered by `Google Gemini 2.5 Pro` API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+) and Socket.IO.
+AI Nexus is a real-time AI neural interface powered by `Google Gemini 3.5 Flash` API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+) and Socket.IO.
 
 **🌐 Ready to chat with AI Nexus :** [Live Demo](https://ainexuspro.vercel.app/)
 
@@ -55,6 +55,8 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 
 ## 📸 Screenshots / Demo
 
+> Take a look at some screenshots showcasing the website.
+
 ### 🌙 Home (Dark Mode)
 ![Home Dark Mode](./screenshots/HomeDarkMode.png)  
 *AI Nexus home interface powered by Gemini, running a multi-modal AI pipeline for smooth human-AI interaction.*
@@ -89,36 +91,45 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 
 ## 🛠️ Setup and Installation
 
-Follow these steps to run the project locally on your machine:
+> To set up and run the project locally, follow these steps below:
 
 ### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/deepanshu1420/AINexus-Powered-By-Gemini.git
+```
+
+### 2️⃣ Navigate to the project directory
+
+```bash
 cd AINexus-Powered-By-Gemini
 ```
 
-### 2️⃣ Install Dependencies
+### 3️⃣ Install the required dependencies
 
-Make sure you have **Node.js** installed, then run:
+Make sure you have `Node.js` installed, then run:
 
 ```bash
 npm install
 ```
 
-### 3️⃣ Start the Development Server
+### 4️⃣ Open the `.env.example` file, add your API Key, then rename it to `.env`
+
+```env
+VITE_API_GENERATIVE_LANGUAGE_CLIENT=your_api_key_here
+```
+
+### 5️⃣ Start the development server
 
 ```bash
 npm run dev
 ```
 
-### 4️⃣ Open the Application
+✅ **That's it!** The project should now be running locally at:
 
-Open your browser and visit:
-
-```bash
+```text
 http://localhost:5173
 ```
 
-The app should now be running locally ☄️
+Open the URL in your browser and embrace the power of `AI Nexus`. ☄️
 

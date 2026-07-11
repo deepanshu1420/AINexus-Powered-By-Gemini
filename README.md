@@ -8,7 +8,8 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow)](https://developer.mozilla.org/docs/Web/JavaScript) 
 [![Socket.IO](https://img.shields.io/badge/Socket.IO-v4.7-indigo)](https://socket.io/) 
 [![UI/UX](https://img.shields.io/badge/UI%2FUX-2025-pink)](#) 
-[![Gemini API](https://img.shields.io/badge/Gemini%20API-v2.5%20Pro-blueviolet)](https://developers.generativeai.google/)
+[![Gemini API](https://img.shields.io/badge/Gemini%20API-v3.5%20Flash-blueviolet)](https://developers.generativeai.google/)
+[![Deployed](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel&logoColor=white)](https://vercel.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 AI Nexus is a real-time AI neural interface powered by `Google Gemini 2.5 Pro` API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+) and Socket.IO.

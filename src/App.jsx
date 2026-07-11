@@ -301,7 +301,7 @@ function App() {
             chatHistory.map((item, idx) => (
               <div key={`hist-${idx}`} className={`history-item ${item.type === "question" ? "q" : "a"}`} title={item.content}>
                 <span className="history-badge">{item.type === "question" ? "You" : "AI"}</span>
-                <p className="history-text">{truncate(item.content, 120)}</p>
+                <p className="history-text">{truncate(stripMarkdown(item.content), 120)}</p>
               </div>
             ))
           )}

@@ -178,30 +178,54 @@ function App() {
         setChatHistory((prev) => [...prev, { type: "answer", content: aiResponse }]);
         setGeneratingAnswer(false);
       } else {
-        const words = aiResponse.split(/\s+/);
         setChatHistory((prev) => [...prev, { type: "answer", content: "" }]);
+        
         let index = 0;
-
-        const typeNextWord = () => {
-          if (index >= words.length) {
+        
+        const chunkSize =
+        typingSpeed <= 15
+        ? 10
+        : typingSpeed <= 40
+        ? 7
+        : 4;
+        
+        const typeNextChunk = () => {
+          if (index >= aiResponse.length) {
             setGeneratingAnswer(false);
-            timeoutIdRef.current = null; // Clean up ref
+            timeoutIdRef.current = null;
             return;
           }
-          const wordToAdd = words[index];
+          
+          const nextChunk = aiResponse.slice(index, index + chunkSize);
+          
           setChatHistory((prev) => {
+            
             const updated = [...prev];
-            const currentContent = updated[updated.length - 1].content;
+            
             updated[updated.length - 1] = {
+              
               type: "answer",
-              content: currentContent ? currentContent + " " + wordToAdd : wordToAdd,
+              
+              content:
+              
+              updated[updated.length - 1].content + nextChunk,
+            
             };
+            
             return updated;
+          
           });
-          index++;
-          timeoutIdRef.current = setTimeout(typeNextWord, typingSpeed);
+          
+          index += chunkSize;
+          
+          timeoutIdRef.current = setTimeout(
+            typeNextChunk,
+            typingSpeed
+          
+          );
         };
-        typeNextWord();
+        
+        typeNextChunk();
       }
     } catch (error) {
       console.log(error);

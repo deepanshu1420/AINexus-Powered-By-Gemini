@@ -33,6 +33,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 - **✏️ Edit & Copy:** Modify your queries and copy AI responses effortlessly for smooth workflow.
 - **⚙️ Response Typing Speed Settings:** Customize AI `response generation speed` to match your preferred reading and interaction pace. 
 - **⌨️ Typing Animation:** Real-time AI typing effects create a more natural and immersive conversation experience.
+- **📄 Rich Markdown Rendering:** Supports `GitHub Flavored Markdown (GFM)`, LaTeX equations, and syntax-highlighted code blocks for enhanced readability.
 
 ## 💡 Spotlights / Tech Stack Used
 
@@ -52,6 +53,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 - 🎨 Responsive and clean modern styled UI with futuristic aesthetics.  
 - 🏗️ Scalable, modular and maintainable React architecture codebase.  
 - 📝 Supports rich text and Markdown formatting for detailed AI answers.
+- 🔥 Optimized for speed, usability and a seamless `end-to-end AI workflow`.
 
 ## 📸 Screenshots / Demo
 

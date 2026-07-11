@@ -12,7 +12,7 @@
 [![Deployed](https://img.shields.io/badge/Deployed-Vercel-red?logo=vercel&logoColor=white)](https://vercel.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-AI Nexus is a real-time AI neural interface powered by `Google Gemini 3.5 Flash` API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+) and Socket.IO.
+AI Nexus is a real-time neural assistant and therapist powered by `Google Gemini 3.5 Flash` API built using React, ReactMarkdown, Axios, Vite, Tailwind CSS, JavaScript (ES6+) and Socket.IO.
 
 **🌐 Ready to chat with AI Nexus :** [Live Demo](https://ainexuspro.vercel.app/)
 

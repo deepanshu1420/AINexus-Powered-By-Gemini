@@ -28,7 +28,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 
 - **🎨 Glassmorphism UI:** Modern glass-style design inspired by `Apple iOS 26` Liquid Glass, featuring layered transparency and smooth gradients for a futuristic look.
 - **⚡ Fluid Animations:** Lightweight motion effects make interactions seamless and engaging across the app.  
-- **💡 AI Integration:** Powered by advanced machine learning models for natural language understanding, smart responses and intelligent code generation. 
+- **💡 AI Integration:** Powered by advanced machine learning models for `natural language understanding`, smart responses and intelligent code generation. 
 - **📝 Chat History:** Track previous conversations easily for context-aware interactions.
 - **✏️ Edit & Copy:** Modify your queries and copy AI responses effortlessly for smooth workflow.
 - **⚙️ Response Typing Speed Settings:** Customize AI `response generation speed` to match your preferred reading and interaction pace. 
@@ -39,7 +39,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 - **🤖 Real-time AI chat:** Seamless communication with the Gemini model.  
 - **🎨 Responsive UI/UX:** Clean, user-friendly interface with Tailwind CSS and modern design principles.  
 - **☄️ JavaScript (ES6+):** Modern syntax features for cleaner, more efficient and scalable code.  
-- **🔄 Socket.IO:** Enables real-time, bi-directional communication between client and server for live AI chat.  
+- **🔄 Socket.IO:** Enables real-time, `bi-directional communication` between client and server for live AI chat.  
 - **🚀 Vite:** Fast build tool and development server with hot-reloading.  
 - **⚛️ React:** Core library for building the UI and managing components.  
 - **🔗 Axios:** Handles API requests to the Google Gemini API.  

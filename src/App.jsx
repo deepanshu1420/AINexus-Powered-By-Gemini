@@ -366,7 +366,7 @@ function App() {
                   className="absolute right-0 mt-2 w-48 bg-[var(--form-bg)] p-4 rounded-xl shadow-lg border border-[var(--glass-border)]"
                 >
                   <label className="block mb-2 text-sm font-semibold text-[var(--bot-message-text)]">
-                    Response typing speed (ms per word)
+                    Response typing speed (in milliseconds)
                   </label>
                   <input
                     type="range"

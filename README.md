@@ -61,7 +61,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 
 ### 🌙 Home (Dark Mode)
 ![Home Dark Mode](./screenshots/HomeDarkMode.png)  
-*AI Nexus home interface powered by Gemini, running a multi-modal AI pipeline for smooth human-AI interaction.*
+*AI Nexus home interface powered by Gemini, running a `multi-modal AI pipeline` for smooth human-AI interaction.*
 
 ### 🤖 AI Response
 ![AI Response](./screenshots/Response.png)  
@@ -69,7 +69,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 
 ### 💻 Code Response
 ![Code Response](./screenshots/CodeResponse.png)  
-*A coding environment where Nexus taps into Gemini’s reasoning to produce structured and executable code snippets.*
+*A coding environment where Nexus taps into `Gemini’s reasoning` to produce structured and executable code snippets.*
 
 ### 🕘 Chat History
 ![Chat History](./screenshots/ChatHistory.png)  
@@ -81,7 +81,7 @@ AI Nexus delivers a responsive, multi-modal chat interface powered by Google Gem
 
 ### ⚙️ Settings & Typing Speed
 ![Settings Typing Speed](./screenshots/SettingsTypingSpeed.png)  
-*Allows customization of AI response speed and personalization of interaction settings.*
+*Allows customization of `AI response speed` and personalization of interaction settings.*
 
 ### 📱 Mobile View 
 ![Mobile View](./screenshots/MobileView.png)  

@@ -20,7 +20,7 @@ AI Nexus is a real-time `neural assistant and therapist` powered by **Google Gem
 ## 🌟 Overview
 AI Nexus delivers a responsive, **multi-modal chat interface** powered by Google Gemini API. Features include real-time chat history, query editing and response copying, adaptive mobile layouts and theme toggling, enabling streamlined human-AI engagement with a polished, minimalistic UI.
 
-**Important Notes:**
+> Important Notes:
 
 - 🔑 A valid Gemini API key is required for AI responses and real-time interaction.  
 - 📶 Stable high-speed internet is recommended, as slow connections may delay or interrupt data fetching.  
@@ -35,6 +35,11 @@ AI Nexus delivers a responsive, **multi-modal chat interface** powered by Google
 - **⚙️ Response Typing Speed (Settings):** Customize AI response generation speed to match your preferred reading and interaction pace. 
 - **⌨️ Typing Animation:** Real-time AI typing effects create a more natural and immersive conversation experience.
 - **📄 Elegant Markdown Rendering:** Supports `GitHub Flavored Markdown (GFM)`, LaTeX equations, and syntax-highlighted code blocks for enhanced readability.
+
+> 🌟 Smart AI Model Fallback:
+
+- **🩺 Automatic Health Check:** Verifies the availability of `Gemini 3.5 Flash` on startup.
+- **🔄 Seamless Failover:** Seamlessly falls back to `Gemini 2.5 Flash` for uninterrupted AI conversations throughout the session.
 
 ## 💡 Spotlights / Tech Stack Used
 

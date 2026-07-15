@@ -26,6 +26,7 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const timeoutIdRef = useRef(null);
+  const abortControllerRef = useRef(null);
   // --- NEW CODE: Ref for the textarea to enable auto-resizing ---
   const textareaRef = useRef(null);
 
@@ -139,13 +140,22 @@ function App() {
       }
     }
   }, [question]); // Reruns whenever the input text changes
-
+     
   const handleStopGeneration = () => {
-    if (timeoutIdRef.current) {
+  // Stop typing animation
+     if (timeoutIdRef.current) {
       clearTimeout(timeoutIdRef.current);
       timeoutIdRef.current = null;
     }
+
+  // Cancel API request if still running
+     if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+      abortControllerRef.current = null;
+    }
+    
     setGeneratingAnswer(false);
+
   };
 
   const stripMarkdown = (text) => {
@@ -187,11 +197,15 @@ function App() {
     }
 
     try {
+    
+      abortControllerRef.current = new AbortController();
+
       const response = await axios({
         url: `https://generativelanguage.googleapis.com/v1beta/models/${activeModelRef.current}:generateContent?key=${
           import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT
         }`,
         method: "post",
+        signal: abortControllerRef.current.signal,
         data: {
           systemInstruction: {
             parts: [
@@ -213,6 +227,7 @@ function App() {
       });
 
       const aiResponse = response.data?.candidates?.[0]?.content?.parts?.[0]?.text ?? "No response received.";
+      abortControllerRef.current = null;
       const isCodeBlock = aiResponse.includes("```");
 
       if (isCodeBlock) {
@@ -269,11 +284,17 @@ function App() {
         typeNextChunk();
       }
     } catch (error) {
+      
+      // User intentionally stopped the request
+      if (error.code === "ERR_CANCELED") {
+        setGeneratingAnswer(false);
+        return;
+      }
+
       // ✅ If 3.5-flash gives ANY error → silently fallback to 2.5-flash
       if (activeModelRef.current === "gemini-3.5-flash") {
         activeModelRef.current = "gemini-2.5-flash";
-        generateAnswer(inputText, true);
-        return;
+        return generateAnswer(inputText, true);
       }
 
       // Already on 2.5-flash and still failing → show error to user

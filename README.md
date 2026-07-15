@@ -9,7 +9,7 @@
 [![Socket.IO](https://img.shields.io/badge/Socket.IO-v4.7-indigo)](https://socket.io/) 
 [![UI/UX](https://img.shields.io/badge/UI%2FUX-2025-pink)](#) 
 [![Gemini API](https://img.shields.io/badge/Gemini%20API-v3.5%20Flash-blueviolet)](https://developers.generativeai.google/)
-[![Git](https://img.shields.io/badge/Git-v2.50-darkcyan?logo=git&logoColor=white)](https://git-scm.com/)
+[![Git](https://img.shields.io/badge/Git-v2.50-saddlebrown?logo=git&logoColor=white)](https://git-scm.com/)
 [![Deployed](https://img.shields.io/badge/Deployed-Vercel-red?logo=vercel&logoColor=white)](https://vercel.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
@@ -18,7 +18,7 @@ AI Nexus is a real-time `neural assistant and therapist` powered by **Google Gem
 **🌐 Ready to chat with AI Nexus :** [Live Demo](https://ainexuspro.vercel.app/)
 
 ## 🌟 Overview
-AI Nexus delivers a responsive, `multi-modal chat interface` powered by Google Gemini API. Features include real-time chat history, query editing and response copying, adaptive mobile layouts and theme toggling, enabling streamlined human-AI engagement with a polished, minimalistic UI.
+AI Nexus delivers a responsive, **multi-modal chat interface** powered by Google Gemini API. Features include real-time chat history, query editing and response copying, adaptive mobile layouts and theme toggling, enabling streamlined human-AI engagement with a polished, minimalistic UI.
 
 **Important Notes:**
 

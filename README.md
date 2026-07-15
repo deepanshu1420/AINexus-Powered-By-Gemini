@@ -9,6 +9,7 @@
 [![Socket.IO](https://img.shields.io/badge/Socket.IO-v4.7-indigo)](https://socket.io/) 
 [![UI/UX](https://img.shields.io/badge/UI%2FUX-2025-pink)](#) 
 [![Gemini API](https://img.shields.io/badge/Gemini%20API-v3.5%20Flash-blueviolet)](https://developers.generativeai.google/)
+[![Git](https://img.shields.io/badge/Git-v2.50-brown?logo=git&logoColor=white)](https://git-scm.com/)
 [![Deployed](https://img.shields.io/badge/Deployed-Vercel-red?logo=vercel&logoColor=white)](https://vercel.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 

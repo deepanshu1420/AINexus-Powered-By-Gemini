@@ -43,6 +43,7 @@ function App() {
   // Refs for settings dropdown
   const settingsButtonRef = useRef(null);
   const settingsMenuRef = useRef(null);
+  const activeModelRef = useRef("gemini-3.5-flash");
 
   // Track manual scrolling to pause autoscroll
   useEffect(() => {
@@ -98,6 +99,28 @@ function App() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isSettingsOpen]);
+
+  // Silent health check on app load
+  useEffect(() => {
+  const checkModel = async () => {
+    try {
+      await axios({
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${
+          import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT
+        }`,
+        method: "post",
+        data: {
+          contents: [{ parts: [{ text: "hi" }] }],
+          generationConfig: { maxOutputTokens: 1 }, // super lightweight ping
+        },
+      });
+      activeModelRef.current = "gemini-3.5-flash"; // ✅ working, use it
+    } catch {
+      activeModelRef.current = "gemini-2.5-flash"; // ❌ failed, switch silently
+    }
+  };
+  checkModel();
+  }, []); // runs only once on mount
 
   // --- NEW CODE: useEffect to handle textarea auto-resize ---
   useEffect(() => {
@@ -155,15 +178,17 @@ function App() {
     }
   };
 
-  const generateAnswer = async (inputText) => {
+  const generateAnswer = async (inputText, isRetry = false) => {
     if (!inputText.trim()) return;
 
     setGeneratingAnswer(true);
-    setChatHistory((prev) => [...prev, { type: "question", content: inputText }]);
+    if (!isRetry) {
+      setChatHistory((prev) => [...prev, { type: "question", content: inputText }]);
+    }
 
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${
+        url: `https://generativelanguage.googleapis.com/v1beta/models/${activeModelRef.current}:generateContent?key=${
           import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT
         }`,
         method: "post",
@@ -244,6 +269,14 @@ function App() {
         typeNextChunk();
       }
     } catch (error) {
+      // ✅ If 3.5-flash gives ANY error → silently fallback to 2.5-flash
+      if (activeModelRef.current === "gemini-3.5-flash") {
+        activeModelRef.current = "gemini-2.5-flash";
+        generateAnswer(inputText, true);
+        return;
+      }
+
+      // Already on 2.5-flash and still failing → show error to user
       console.log(error);
       let message = "Something went wrong. Please try again.";
       if (error.response?.status === 429) {

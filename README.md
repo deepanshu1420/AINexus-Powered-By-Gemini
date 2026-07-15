@@ -109,13 +109,15 @@ cd AINexus-Powered-By-Gemini
 
 ### 3️⃣ Install the required dependencies
 
-Make sure you have `Node.js` installed, then run:
+> Make sure you have `Node.js` installed, then run:
 
 ```bash
 npm install
 ```
 
 ### 4️⃣ Open the `.env.example` file, add your API Key, then rename it to `.env`
+
+> Visit `https://aistudio.google.com/` to generate your API Key and Base URL.
 
 ```env
 VITE_API_GENERATIVE_LANGUAGE_CLIENT=your_api_key_here

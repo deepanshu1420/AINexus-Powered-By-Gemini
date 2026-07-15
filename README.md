@@ -36,7 +36,7 @@ AI Nexus delivers a responsive, **multi-modal chat interface** powered by Google
 - **⌨️ Typing Animation:** Real-time AI typing effects create a more natural and immersive conversation experience.
 - **📄 Elegant Markdown Rendering:** Supports `GitHub Flavored Markdown (GFM)`, LaTeX equations, and syntax-highlighted code blocks for enhanced readability.
 
-> 🌟 Smart AI Model Fallback:
+> Smart AI Model Fallback:
 
 - **🩺 Automatic Health Check:** Verifies the availability of `Gemini 3.5 Flash` on startup.
 - **🔄 Seamless Failover:** Seamlessly falls back to `Gemini 2.5 Flash` for uninterrupted AI conversations throughout the session.

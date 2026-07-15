@@ -39,7 +39,7 @@ AI Nexus delivers a responsive, **multi-modal chat interface** powered by Google
 > Smart AI Model Fallback:
 
 - **🩺 Automatic Health Check:** Proactively verifies the availability of `Gemini 3.5 Flash` on startup.
-- **🔄 Seamless Failover:** Seamlessly falls back to `Gemini 2.5 Flash` for uninterrupted AI responses throughout the session.
+- **🔄 Seamless Failover:** Seamlessly falls back to `Gemini 2.5 Flash` to ensure uninterrupted AI responses.
 
 ## 💡 Spotlights / Tech Stack Used
 
